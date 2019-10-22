@@ -29,9 +29,9 @@ def consolidate_cart(cart)
       fill_basket << cart[item_index]
     while basket_index <= fill_basket.length do
        # binding.pry
-      if fill_basket[basket_index].has_value?(cart[item_index][:item]) && fill_basket
+      if fill_basket[basket_index].has_value?(cart[item_index][:item]) && fill_basket.has_key?(:count)
         fill_basket[basket_index][:count] += 1
-      else
+      elsif
         fill_basket << cart[item_index]
         fill_basket[basket_index][:count] = 1
       end
