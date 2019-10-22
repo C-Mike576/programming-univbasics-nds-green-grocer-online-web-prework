@@ -36,7 +36,7 @@ def consolidate_cart(cart)
         elsif fill_basket[basket_index].has_value?(cart[item_index][:item])
         fill_basket[basket_index][:count] = 1
         else
-          fill_basket << cart[item_index]
+          fill_basket << Marshal.load(Marshal.dump(cart[item_index]))
         end
       basket_index += 1
     end
