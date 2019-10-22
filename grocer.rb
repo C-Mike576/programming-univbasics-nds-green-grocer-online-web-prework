@@ -103,6 +103,7 @@ def checkout(cart, coupons)
   p cart
   p coupons
   #binding.pry
+  item_index = 0
   cart = consolidate_cart(cart).uniq
   #binding.pry
   cart = apply_coupons(cart, coupons)
@@ -110,7 +111,7 @@ def checkout(cart, coupons)
   cart = apply_clearance(cart)
   #binding.pry
   total = 0
-  item_index = 0
+  
   p cart
   while item_index < cart.length do
     #binding.pry
