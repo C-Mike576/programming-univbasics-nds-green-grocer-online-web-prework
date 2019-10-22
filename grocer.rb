@@ -108,8 +108,9 @@ def checkout(cart, coupons)
   #binding.pry
   cart = apply_clearance(cart)
   #binding.pry
-  
+  total = 0
   item_index = 0
+  
   while item_index < cart.length do
     #binding.pry
     total += (cart[item_index][:price]*cart[item_index][:count])
@@ -118,6 +119,7 @@ def checkout(cart, coupons)
   if total >= 100
     total = total - (total*0.1).round(2)
   end
-   total.round(2)
+  binding.pry
+  p total.round(2)
 
 end
