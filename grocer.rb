@@ -21,7 +21,9 @@ def consolidate_cart(cart)
   
   fill_basket = []
   item_index = 0
-  
+  if cart[item_index].has_key?(:count)
+    return cart
+  end
   while item_index < cart.length do
     #binding.pry
     basket_index = 0
@@ -105,9 +107,7 @@ def checkout(cart, coupons)
   #binding.pry
   total = 0
   item_index = 0
-  if cart[item_index].has_key?(:count)
-    return total += (cart[item_index][:price]*cart[item_index][:count])
-  end
+  
   cart = consolidate_cart(cart)
   #binding.pry
   cart = apply_coupons(cart, coupons)
