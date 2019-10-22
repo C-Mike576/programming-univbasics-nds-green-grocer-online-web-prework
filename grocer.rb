@@ -27,7 +27,7 @@ def consolidate_cart(cart)
     basket_index = 0
     
     if fill_basket.length == 0
-      fill_basket << cart[item_index]
+      fill_basket << Marshal.load(Marshal.dump(cart[item_index]))
     end
       while basket_index < fill_basket.length do
         binding.pry
