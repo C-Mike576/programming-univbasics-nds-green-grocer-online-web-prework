@@ -103,14 +103,17 @@ def checkout(cart, coupons)
   p cart
   p coupons
   #binding.pry
+  total = 0
   item_index = 0
+  if cart[item_index].has_key?(:count)
+    return total 
   cart = consolidate_cart(cart).uniq
   #binding.pry
   cart = apply_coupons(cart, coupons)
   #binding.pry
   cart = apply_clearance(cart)
   #binding.pry
-  total = 0
+  
   
   p cart
   while item_index < cart.length do
