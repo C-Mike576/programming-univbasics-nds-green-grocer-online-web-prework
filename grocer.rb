@@ -102,7 +102,7 @@ def checkout(cart, coupons)
   # some irritated customers
   total = 0
   consolidate_cart(cart)
-  #binding.pry
+  binding.pry
   apply_coupons(cart, coupons)
   apply_clearance(cart)
   
