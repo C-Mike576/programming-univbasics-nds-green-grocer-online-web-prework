@@ -45,8 +45,11 @@ def consolidate_cart(cart)
    item_index += 1
  end
  #binding.pry
-  fill_basket[:item].uniq
-    
+ final_basket=[]
+  fill_basket.each do |basket|
+    final_basket << basket[:item] unless final_basket.include? basket[:item]
+  end
+  final_basket
 end
 
 def apply_coupons(cart, coupons)
