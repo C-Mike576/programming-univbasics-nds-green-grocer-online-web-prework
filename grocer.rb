@@ -112,10 +112,7 @@ def checkout(cart, coupons)
   item_index = 0
   while item_index < cart.length do
     #binding.pry
-    if cart[item_index].has_key?(:count)
     total += (cart[item_index][:price]*cart[item_index][:count])
-    else  
-      total += cart[item_index][:price]
     end
     item_index += 1
   end
