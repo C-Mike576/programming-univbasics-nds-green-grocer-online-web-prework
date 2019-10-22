@@ -108,7 +108,7 @@ def checkout(cart, coupons)
   if cart[item_index].has_key?(:count)
     return total += (cart[item_index][:price]*cart[item_index][:count])
   end
-  cart = consolidate_cart(cart)
+  cart = consolidate_cart(cart).uniq
   #binding.pry
   cart = apply_coupons(cart, coupons)
   #binding.pry
