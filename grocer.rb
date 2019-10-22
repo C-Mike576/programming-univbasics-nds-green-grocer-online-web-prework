@@ -23,7 +23,7 @@ def consolidate_cart(cart)
   item_index = 0
   
   while item_index < cart.length do
-    #binding.pry
+    binding.pry
     basket_index = 0
     
     if fill_basket.length == 0
