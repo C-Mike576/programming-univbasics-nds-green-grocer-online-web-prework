@@ -103,13 +103,13 @@ def checkout(cart, coupons)
   # BEFORE it begins the work of calculating the total (or else you might have
   # some irritated customers
   p cart
-  p coupons
   #binding.pry
   total = 0
   item_index = 0
   
   cart = consolidate_cart(cart)
   #binding.pry
+  p cart
   cart = apply_coupons(cart, coupons)
   #binding.pry
   cart = apply_clearance(cart)
