@@ -72,7 +72,7 @@ def apply_coupons(cart, coupons)
     end
     coupon_count += 1
   end
-   cart
+   cart.uniq
 end
 
 def apply_clearance(cart)
@@ -87,7 +87,7 @@ def apply_clearance(cart)
     end
     item_index += 1
   end
-  cart
+  cart.uniq
 end
 
 def checkout(cart, coupons)
@@ -119,7 +119,7 @@ def checkout(cart, coupons)
   if total >= 100
     total = total - (total*0.1).round(2)
   end
-  binding.pry
+  #binding.pry
   p total.round(2)
 
 end
