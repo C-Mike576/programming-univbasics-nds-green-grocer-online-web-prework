@@ -25,6 +25,8 @@ def consolidate_cart(cart)
   while item_index < cart.length do
     #binding.pry
     basket_index = 0
+    if fill_basket.length == 0
+      
     while basket_index <= fill_basket.length do
         fill_basket << cart[item_index]
        # binding.pry
