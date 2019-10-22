@@ -43,6 +43,7 @@ def consolidate_cart(cart)
    item_index += 1
  end
  binding.pry
+ 
 p fill_basket
 end
 
