@@ -72,7 +72,7 @@ def apply_coupons(cart, coupons)
     end
     coupon_count += 1
   end
-  p cart
+   cart
 end
 
 def apply_clearance(cart)
