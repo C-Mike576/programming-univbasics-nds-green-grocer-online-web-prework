@@ -45,7 +45,7 @@ def consolidate_cart(cart)
    item_index += 1
  end
  #binding.pry
-  fill_basket.uniq
+  fill_basket[:item].uniq
     
 end
 
