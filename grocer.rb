@@ -102,7 +102,7 @@ def checkout(cart, coupons)
   # some irritated customers
   total = 0
   consolidate_cart(cart)
-  binding.pry
+  #binding.pry
   apply_coupons(cart, coupons)
   apply_clearance(cart)
   
@@ -119,6 +119,6 @@ def checkout(cart, coupons)
   if total >= 100
     total = total - (total*0.1).round(2)
   end
-  p total.round(2)
+   total.round(2)
 
 end
