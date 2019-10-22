@@ -87,7 +87,7 @@ def apply_clearance(cart)
     end
     item_index += 1
   end
-  cart.uniq
+  cart
 end
 
 def checkout(cart, coupons)
