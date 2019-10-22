@@ -31,7 +31,7 @@ def consolidate_cart(cart)
        # binding.pry
       if fill_basket[basket_index].has_value?(cart[item_index][:item]) && fill_basket.has_key?(:count)
         fill_basket[basket_index][:count] += 1
-      elsif
+      elsif 
         fill_basket << cart[item_index]
         fill_basket[basket_index][:count] = 1
       end
