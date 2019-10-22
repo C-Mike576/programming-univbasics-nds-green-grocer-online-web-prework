@@ -42,9 +42,8 @@ def consolidate_cart(cart)
     end
    item_index += 1
  end
- binding.pry
- 
-p fill_basket
+ #binding.pry
+  fill_basket.uniq
 end
 
 def apply_coupons(cart, coupons)
