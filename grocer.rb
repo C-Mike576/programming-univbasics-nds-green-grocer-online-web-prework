@@ -110,7 +110,7 @@ def checkout(cart, coupons)
   #binding.pry
   total = 0
   item_index = 0
-  
+  p cart
   while item_index < cart.length do
     #binding.pry
     total += (cart[item_index][:price]*cart[item_index][:count])
@@ -120,6 +120,7 @@ def checkout(cart, coupons)
     total = total - (total*0.1).round(2)
   end
   #binding.pry
+  p cart
   p total.round(2)
 
 end
