@@ -103,7 +103,7 @@ def checkout(cart, coupons)
   p cart
   p coupons
   #binding.pry
-  cart = consolidate_cart(cart)
+  cart = consolidate_cart(cart).uniq
   #binding.pry
   cart = apply_coupons(cart, coupons)
   #binding.pry
