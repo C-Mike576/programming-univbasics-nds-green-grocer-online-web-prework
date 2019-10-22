@@ -46,7 +46,7 @@ def consolidate_cart(cart)
  end
  #binding.pry
  
-  fill_basket.uniq { |f| f[:item]
+  fill_basket.uniq { |f| f[:item] }
 end
 
 def apply_coupons(cart, coupons)
