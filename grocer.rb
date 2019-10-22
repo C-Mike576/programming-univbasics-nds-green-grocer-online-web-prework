@@ -72,7 +72,7 @@ def apply_coupons(cart, coupons)
     end
     coupon_count += 1
   end
-   cart.uniq
+   cart
 end
 
 def apply_clearance(cart)
@@ -108,7 +108,7 @@ def checkout(cart, coupons)
   if cart[item_index].has_key?(:count)
     return total += (cart[item_index][:price]*cart[item_index][:count])
   end
-  cart = consolidate_cart(cart).uniq
+  cart = consolidate_cart(cart)
   #binding.pry
   cart = apply_coupons(cart, coupons)
   #binding.pry
